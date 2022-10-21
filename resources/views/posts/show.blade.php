@@ -10,7 +10,7 @@
     <a href="/" class="backlink"> &laquo; back</a>
     <ul>
         <h1>{{ $post->title }}</h1>
-        <p>{{ $post->body }}</p>
+        <p>{!! nl2br(e($post->body)) !!}</p>
     </ul>
 </body>
 </html>

@@ -8,6 +8,7 @@
 </head>
 <body>
     <h1>hello laravel</h1>
+    <h2><a href="{{ route('posts.create') }}">Create Post!</a></h2>
 
     <ul>
         @forelse ($posts as $post)

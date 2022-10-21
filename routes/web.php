@@ -22,6 +22,14 @@ Route::get('/posts/{post}', [App\Http\Controllers\PostController::class, 'show']
 Route::get('/', [App\Http\Controllers\PostController::class, 'web'])
     ->name('posts.web');
 
+Route::get('/posts/create', [App\Http\Controllers\PostController::class, 'create'])
+    ->name('posts.create');
+
+Route::post('/posts/store', [App\Http\Controllers\PostController::class, 'store'])
+    ->name('posts.store');
+
+
+
 
 
 
