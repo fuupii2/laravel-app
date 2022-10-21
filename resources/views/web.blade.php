@@ -19,10 +19,12 @@
                 <a href="{{ route('posts.edit', $post) }}">
                     [edit]
                 </a>
+
             </li>
         @empty
-            <li>empty set</li>
+            <li>なにも投稿されていません</li>
         @endforelse
     </ul>
+
 </body>
 </html>

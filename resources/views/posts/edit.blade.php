@@ -8,7 +8,8 @@
 </head>
 <body>
     <a href="/" class="backlink"> &laquo; back</a>
-    <h2>Let's create something</h2>
+    <h2>edit form</h2>
+
 
     <form action="{{ route('posts.update', $post) }}" method="post">
         @method('PATCH')

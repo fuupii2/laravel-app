@@ -8,9 +8,29 @@
 </head>
 <body>
     <a href="/" class="backlink"> &laquo; back</a>
-    <ul>
         <h1>{{ $post->title }}</h1>
+        <form method="post" action="{{ route('posts.delete', $post) }}" id="destroy">
+            @method('DELETE')
+            @csrf
+            <button>[x]</button>
+        </form>
+
         <p>{!! nl2br(e($post->body)) !!}</p>
-    </ul>
+
+    <script>
+        'use strict'
+        {
+        const destroy = document.getElementById('destroy');
+        destroy.addEventListener('submit', e => {
+            e.preventDefault();
+
+            if(!confirm('Sure to delete?')) {
+                return;
+            }
+
+            e.target.submit();
+        });
+    }
+    </script>
 </body>
 </html>
