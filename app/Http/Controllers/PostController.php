@@ -44,4 +44,30 @@ class PostController extends Controller
         return redirect()
             ->route('posts.web');
     }
+
+    public function edit(Post $post)
+    {
+        return view('posts.edit')
+            ->with(['post' => $post]);
+    }
+
+    public function update(Request $request, Post $post)
+    {
+        $request->validate([
+            'title' => 'required|min:3',
+            'body' => 'required',
+        ],
+        [
+            'title.required' => '本文を入力してください',
+            'title.min' => ':min文字以上入力してください',
+            'body.required' => '本文を入力してください',
+        ]);
+        $post->title = $request->title;
+        $post->body = $request->body;
+        $post->save();
+
+        return redirect()
+            ->route('posts.show',$post);
+    }
+
 }

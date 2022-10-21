@@ -12,7 +12,14 @@
 
     <ul>
         @forelse ($posts as $post)
-            <li><a href="{{ route('posts.show', $post) }}">{{ $post->title }}</a></li>
+            <li>
+                <a href="{{ route('posts.show', $post) }}">
+                    {{ $post->title }}
+                </a>
+                <a href="{{ route('posts.edit', $post) }}">
+                    [edit]
+                </a>
+            </li>
         @empty
             <li>empty set</li>
         @endforelse

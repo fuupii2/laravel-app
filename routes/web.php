@@ -28,6 +28,14 @@ Route::get('/posts/create', [App\Http\Controllers\PostController::class, 'create
 Route::post('/posts/store', [App\Http\Controllers\PostController::class, 'store'])
     ->name('posts.store');
 
+Route::get('/posts/{post}/edit', [App\Http\Controllers\PostController::class, 'edit'])
+    ->name('posts.edit')
+    ->where('post', '[0-9]+');
+
+Route::patch('/posts/{post}/update', [App\Http\Controllers\PostController::class, 'update'])
+    ->name('posts.update')
+    ->where('post', '[0-9]+');
+
 
 
 
