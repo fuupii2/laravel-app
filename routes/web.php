@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/posts/{post}', [App\Http\Controllers\PostController::class, 'show'])
+    ->name('posts.show')
+    ->where('post', '[0-9]+');
+
+Route::get('/', [App\Http\Controllers\PostController::class, 'web'])
+    ->name('posts.web');
+
+
+
+
