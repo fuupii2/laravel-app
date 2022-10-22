@@ -1,0 +1,157 @@
+$basefontweight: 32px;
+$contentsWidth: 1140px;
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: rgba(0, 0, 0, .9);
+}
+
+.contents {
+    width: $contentsWidth;
+    padding-bottom: 600px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgba(255, 255, 255,);
+    margin-top: 80px;
+    position: relative;
+}
+
+h1 {
+    width: $contentsWidth / 2;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #000;
+    color: black;
+    font-family: serif;
+    font-size: $basefontweight;
+}
+
+    .cbtn
+     {
+        font-size: 18px;
+        background-color: lightgreen;
+        text-decoration: none;
+        padding: 6px 10px;
+        color: white;
+        border-radius: 4px;
+        text-shadow: .5px .5px 0px black;
+            &:hover{
+                opacity: .8;
+            }
+        position: absolute;
+        top: 25px;
+        right: 25px;
+    }
+    .back-link
+    {
+        font-size: 18px;
+        background-color: lightcoral;
+        text-decoration: none;
+        padding: 6px 10px;
+        color: white;
+        border-radius: 4px;
+        text-shadow: .5px .5px 0px black;
+            &:hover{
+                opacity: .8;
+            }
+        position: absolute;
+        top: 25px;
+        left: 25px;
+    }
+
+    ul {
+        li{
+            display: inline-block;
+            width: $contentsWidth / 2;
+            margin-left: 10px;
+            margin-top: 20px;
+            text-align: left;
+            border-bottom: 1px solid #000;
+            a {
+                text-decoration: none;
+                color: black;
+            }
+        }
+    }
+
+    form {
+        display: flex;
+        flex-flow: column;
+    }
+
+   input,
+   textarea{
+    width: $contentsWidth / 2;
+   }
+
+   input {
+    height: 24px;
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 1px;
+   }
+
+   textarea {
+    height: 100px;
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+   }
+
+   h2 {
+    display: inline-block;
+            width: $contentsWidth / 2;
+            margin-left: 10px;
+            margin-top: 10px;
+            text-align: left;
+   }
+
+   .error {
+    display: inline-block;
+            width: $contentsWidth / 2;
+            text-align: left;
+            color: red;
+   }
+
+   .delete-btn {
+    font-size: 18px;
+        background-color: lightcoral;
+        text-decoration: none;
+        padding: 6px 20px;
+        color: white;
+        border-radius: 4px;
+            &:hover{
+                opacity: .8;
+            }
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        border-width: 0px;
+   }
+
+
+  .edit-btn {
+   float: right;
+  }
+
+  p {
+    display: inline-block;
+            width: $contentsWidth / 2;
+            line-height: 1.6;
+            margin-left: 10px;
+            margin-top: 20px;
+            text-align: left;
+            border-bottom: 1px solid #000;
+  }
+
+
+
+
