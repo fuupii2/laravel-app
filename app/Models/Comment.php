@@ -4,19 +4,19 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Comment;
+use App\Model\Post;
 
-class Post extends Model
+class Comment extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'title',
+        'post_id',
         'body',
     ];
 
-    public function comments()
+    public function post()
     {
-        return $this->Hasmany(Comment::class);
+        return $this->belongTo(Post::class);
     }
 }

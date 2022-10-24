@@ -2,6 +2,12 @@
     <a href="/" class="back-link"> &laquo; back</a>
     <h1>Edit form</h1>
 
+    <form method="post" action="{{ route('posts.delete', $post) }}" id="destroy">
+        @method('DELETE')
+        @csrf
+        <button class="delete-btn">x</button>
+    </form>
+
 
     <form action="{{ route('posts.update', $post) }}" method="post">
         @method('PATCH')

@@ -9,6 +9,29 @@
 
     <p>{!! nl2br(e($post->body)) !!}</p>
 
+    <h1 class="commentPop">Comments</h1>
+
+    <ul>
+    @forelse ($post->comments as $item)
+        <div class="comment">
+            <li class="comments">
+                {{ $item->body }}
+                <h4 class="update">
+                    {{ $item->updated_at }}
+                </h4>
+            </li>
+        </div>
+    @empty
+        <h1></h1>
+    @endforelse
+    </ul>
+
+    <form action="{{ route('comments.store', $post) }}" method="post" class="comment-form">
+    @csrf
+    <input type="text" name="body">
+    <button class="comment-btn">送信</button>
+    </form>
+
 <script>
     'use strict'
     {

@@ -8,7 +8,7 @@ body {
 }
 
 .contents {
-  width: 1140px;
+  width: 980px;
   padding-bottom: 600px;
   margin: 0 auto;
   text-align: center;
@@ -18,7 +18,7 @@ body {
 }
 
 h1 {
-  width: 570px;
+  width: 490px;
   margin: 0 auto;
   padding-top: 20px;
   padding-bottom: 1px;
@@ -62,7 +62,7 @@ h1 {
 
 ul li {
   display: inline-block;
-  width: 570px;
+  width: 490px;
   margin-left: 10px;
   margin-top: 20px;
   text-align: left;
@@ -80,7 +80,7 @@ form {
 
 input,
 textarea {
-  width: 570px;
+  width: 490px;
 }
 
 input {
@@ -102,7 +102,7 @@ textarea {
 
 h2 {
   display: inline-block;
-  width: 570px;
+  width: 490px;
   margin-left: 10px;
   margin-top: 10px;
   text-align: left;
@@ -110,7 +110,7 @@ h2 {
 
 .error {
   display: inline-block;
-  width: 570px;
+  width: 490px;
   text-align: left;
   color: red;
 }
@@ -137,10 +137,43 @@ h2 {
 
 p {
   display: inline-block;
-  width: 570px;
+  width: 490px;
   line-height: 1.6;
   margin-left: 10px;
   margin-top: 20px;
   text-align: left;
   border-bottom: 1px solid #000;
+  padding-bottom: 100px;
+}
+
+ul .comments {
+  list-style: none;
+  display: inline-block;
+  width: 490px;
+  margin-left: 10px;
+  margin-top: 40px;
+  text-align: left;
+  border-bottom: 1px solid #000;
+}
+
+.commentPop {
+  margin-top: 150px;
+}
+
+.update {
+  float: right;
+}
+
+.comment-form {
+  margin-top: 100px;
+  display: inline-block;
+  width: 490px;
+  margin-left: 10px;
+  margin-top: 40px;
+  text-align: left;
+}
+
+.comment-btn {
+  padding: 20px 40px;
+  float: right;
 }/*# sourceMappingURL=style.css.map */

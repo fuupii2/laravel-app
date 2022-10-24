@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\CommentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,6 +39,10 @@ Route::patch('/posts/{post}/update', [App\Http\Controllers\PostController::class
 
 Route::delete('/posts/{post}/delete', [App\Http\Controllers\PostController::class, 'delete'])
     ->name('posts.delete')
+    ->where('post', '[0-9]+');
+
+Route::post('/posts/{post}/comments', [App\Http\Controllers\CommentController::class, 'comments'])
+    ->name('comments.store')
     ->where('post', '[0-9]+');
 
 
